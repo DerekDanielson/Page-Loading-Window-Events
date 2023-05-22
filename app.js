@@ -3,5 +3,15 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('scroll', () => {
-    console.log(`Scrolled: ${window.scrollX} x ${window.scrollY}`)
+    console.log(`Scrolled: ${window.scrollX} x ${window.scrollY}`);
+
+    if (window.scrollY > 70){
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
+    }
+
+    if (window.scrollY < 70) {
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+    }
 });
